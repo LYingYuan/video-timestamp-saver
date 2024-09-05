@@ -6,7 +6,7 @@ function getCurrentTimestamp() {
   if (window.location.hostname.includes('youtube.com')) {
     video = document.querySelector('video');
   } else if (window.location.hostname.includes('bilibili.com')) {
-    video = document.querySelector('.bilibili-player-video video');
+    video = document.querySelector('#bilibili-player video');
   } else if (window.location.hostname.includes('plex.tv')) {
     video = document.querySelector('video');
   }
