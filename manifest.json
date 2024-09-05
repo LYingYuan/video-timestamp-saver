@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Video Timestamp Export",
+  "version": "1.0",
+  "description": "Export video timestamps for YouTube, Bilibili, and Plex",
+  "permissions": ["activeTab", "clipboardWrite", "tabs"],
+  "host_permissions": ["*://*.youtube.com/*", "*://*.bilibili.com/*", "*://*.plex.tv/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*", "*://*.bilibili.com/*", "*://*.plex.tv/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
